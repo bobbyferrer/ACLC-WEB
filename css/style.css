@@ -1,0 +1,24 @@
+.datepicker-date-display {
+  background: purple;
+}
+
+
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+  color: purple;
+}
+
+
+button.datepicker-day-button {
+  /* color: purple; */
+}
+
+.datepicker-table td.is-today {
+  color: rgb(48, 1, 48);
+
+}
+
+
+.datepicker-table td.is-selected {
+  background: purple;
+
+}

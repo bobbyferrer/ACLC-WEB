@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <!-- Font awesome icons -->
+  <script src="https://kit.fontawesome.com/6a79530112.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Forms</title>
+</head>
+<body class="grey lighten-2">
+
+  <div class="container">
+    <h1 class="purple-text">Date & Time Picker</h1>
+    <form>
+      <!-- Date picker -->
+      <div class="input-field">
+        <input type="text" class="datepicker">
+        <label for="date">Birthdate</label>
+      </div>
+     <!-- Time picker -->
+      <div class="input-field">
+        <input type="text" class="timepicker">
+        <label for="time">Choose a time</label>
+      </div>
+
+      <!-- Character counter -->
+      <div class="input-field">
+        <input type="text" id="post" data-length="10">
+        <label for="post">Post</label>
+      </div>
+      <div class="input-field">
+        <textarea id="textarea2" class="materialize-textarea" data-length="20"></textarea>
+        <label for="textarea2">Textarea</label>
+      </div>
+
+      <!-- AutoComplete -->
+      <div class="input-field">
+        <input type="text" id="fruit" class="autocomplete">
+        <label for="fruit">Type a Fruit</label>
+      </div>
+    </form>
+  </div>
+  
+
+
+
+  <!-- Jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+  <script>
+    $(document).ready(function(){
+      // Datepicker init
+      $('.datepicker').datepicker({
+        autoClose: false,
+        yearRange: 100
+      });
+    //  Timepicker
+      $('.timepicker').timepicker();
+      // Character counter init
+      $('input#post, textarea#textarea2').characterCounter();
+
+      // Autocomplete Init
+      $('input.autocomplete').autocomplete({
+        data: {
+          "Apple": null,
+          "Orange": null,
+          "Banana": null,
+          "Grapes": null,
+          "Strawberries": null,
+          "Pearl": null,
+          "Plumbs": null
+        },
+        minLength: 1,
+        limit: 5
+
+      });
+    });
+  </script>
+</body>
+</html>
